@@ -1,3 +1,6 @@
+# How to Run
+See [Running the Application](./QUICK_START.md) for instructions on how to set up and run the application locally.
+
 # Architecture & Component Structure
 
 ## Application Architecture
