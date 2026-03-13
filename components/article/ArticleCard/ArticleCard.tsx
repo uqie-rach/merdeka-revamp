@@ -46,7 +46,7 @@ export const ArticleCard = React.memo(function ArticleCard({
         <article className={`group cursor-pointer overflow-hidden rounded-lg bg-card hover:shadow-lg transition-shadow ${className}`}>
           <ArticleImage src={image} alt={title} aspectRatio="video" className="group-hover:scale-105 transition-transform duration-300" />
           <div className="p-6 space-y-3">
-            <Badge variant="primary">{category}</Badge>
+            <Badge variant="accent">{category}</Badge>
             <h2 className="text-2xl font-bold group-hover:text-primary transition-colors line-clamp-3">{title}</h2>
             <p className="text-muted-foreground line-clamp-2">{excerpt}</p>
             <Divider />
@@ -100,7 +100,7 @@ export const ArticleCard = React.memo(function ArticleCard({
       <article className={`group cursor-pointer overflow-hidden rounded-lg bg-card hover:shadow-md transition-shadow ${className}`}>
         <ArticleImage src={image} alt={title} aspectRatio="video" className="group-hover:scale-105 transition-transform duration-300" />
         <div className="p-4 space-y-2">
-          <Badge variant="primary">{category}</Badge>
+          <Badge variant="accent">{category}</Badge>
           <h3 className="font-bold group-hover:text-primary transition-colors truncate-2">{title}</h3>
           <p className="text-sm text-muted-foreground truncate-2">{excerpt}</p>
           <div className="flex items-center justify-between text-xs text-muted-foreground pt-2">
