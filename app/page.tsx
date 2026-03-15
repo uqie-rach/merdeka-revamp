@@ -7,6 +7,7 @@ import { ArticleCard } from '@/components/article/ArticleCard/ArticleCard';
 import { Sidebar } from '@/components/layout/Sidebar/Sidebar';
 import { AdSlot } from '@/components/ads/AdSlot/AdSlot';
 import { Divider } from '@/components/ui/primitives/Divider';
+import Headline from '@/components/ui/Headline';
 
 // Mock data
 const featuredArticle = {
@@ -123,6 +124,9 @@ export default function HomePage() {
   return (
     <MainLayout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Headline hari ini */}
+        <Headline />
+        
         {/* Featured Article */}
         <section className="mb-12">
           <ArticleCard {...featuredArticle} variant="featured" />
