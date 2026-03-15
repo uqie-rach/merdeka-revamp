@@ -2,7 +2,7 @@
 const SearchBar = () => {
     return (
         <div
-            className="w-full md:w-[528px] h-[48px] p-1 rounded-full"
+            className="w-full md:w-132 h-12 p-1 rounded-full"
             style={{
                 background:
                     "linear-gradient(90deg, #F5EEFC 0%, #E5CCFF 50%, #F5EEFC 100%)",
@@ -21,7 +21,7 @@ const SearchBar = () => {
                     className="w-full h-full text-sm placeholder:text-xs outline-none"
                 />
                 <button
-                    className='rounded-full w-[72px] h-[32px] flex items-center justify-center gap-1 text-[10px] md:text-xs font-medium text-white'
+                    className='rounded-full w-18 h-8 flex items-center justify-center gap-1 text-[10px] md:text-xs font-medium text-white'
                     style={{
                         background:
                             "linear-gradient(to left, #8318F5 0%, #0E09FF 100%)"

@@ -89,7 +89,7 @@ export function Sidebar({ className = '', isLoading = false }: SidebarProps) {
       <AdSlot position="sidebar-middle" lazy />
 
       {/* Newsletter signup */}
-      <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-6 border border-primary/20">
+      <div className="bg-linear-to-br from-primary/10 to-accent/10 rounded-lg p-6 border border-primary/20">
         {isLoading ? (
           <div className="space-y-3">
             <SkeletonText lines={3} />

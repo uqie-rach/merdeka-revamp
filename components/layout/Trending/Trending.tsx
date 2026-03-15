@@ -21,7 +21,7 @@ const Trending = () => {
     return (
         <section className="mt-2 px-4 sm:px-6 lg:px-8">
             <div className="bg-primary max-w-7xl mx-auto rounded-md">
-                <div className="relative bg-purple-100 dark:bg-[#0a0a0a] rounded-md border-2 border-primary/80 w-full h-[54px] flex items-center py-1 px-3 overflow-hidden">
+                <div className="relative bg-purple-100 dark:bg-[#0a0a0a] rounded-md border-2 border-primary/80 w-full h-13.5 flex items-center py-1 px-3 overflow-hidden">
 
                     {/* Title */}
                     <span className="flex gap-2 items-center text-primary mr-4 shrink-0">
@@ -50,10 +50,10 @@ const Trending = () => {
                         </div>
 
                         {/* left blur */}
-                        <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-purple-100 dark:from-[#0a0a0a] to-transparent pointer-events-none" />
+                        <div className="absolute left-0 top-0 h-full w-12 bg-linear-to-r from-purple-100 dark:from-[#0a0a0a] to-transparent pointer-events-none" />
 
                         {/* right blur */}
-                        <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-purple-100 dark:from-[#0a0a0a] to-transparent pointer-events-none" />
+                        <div className="absolute right-0 top-0 h-full w-12 bg-linear-to-r from-purple-100 dark:from-[#0a0a0a] to-transparent pointer-events-none" />
 
                     </div>
 

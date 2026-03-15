@@ -20,7 +20,7 @@ export function Header() {
         {/* Header's body */}
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <a href="/" className="flex items-center gap-2">
               <img
                 src={'/icons/logo-merdeka.svg'}
