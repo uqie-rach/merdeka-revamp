@@ -9,12 +9,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h4 className="font-bold mb-4 flex items-center gap-2">
-              <div className="w-6 h-6 rounded bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">
-                M
-              </div>
-              Merdeka
-            </h4>
+            <img
+              src={'/icons/logo-merdeka.svg'}
+              width={136}
+              height={40}
+            />
             <p className="text-sm text-muted-foreground">
               Indonesia's leading news source for breaking news, business, politics, and more.
             </p>

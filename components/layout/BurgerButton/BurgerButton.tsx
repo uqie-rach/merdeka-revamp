@@ -21,15 +21,15 @@ export function BurgerButton({ isOpen, onClick, className = '' }: BurgerButtonPr
     >
       <div className="relative w-6 h-6 flex items-center justify-center">
         <span
-          className={`absolute w-6 h-0.5 bg-currentColor rounded-full transition-all duration-300 ease-in-out
+          className={`absolute w-6 h-0.5 bg-gray-800 dark:bg-gray-200 rounded-full transition-all duration-300 ease-in-out
             ${isOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'}`}
         />
         <span
-          className={`absolute w-6 h-0.5 bg-currentColor rounded-full transition-all duration-300 ease-in-out
+          className={`absolute w-6 h-0.5 bg-gray-800 dark:bg-gray-200 rounded-full transition-all duration-300 ease-in-out
             ${isOpen ? 'opacity-0' : 'opacity-100'}`}
         />
         <span
-          className={`absolute w-6 h-0.5 bg-currentColor rounded-full transition-all duration-300 ease-in-out
+          className={`absolute w-6 h-0.5 bg-gray-800 dark:bg-gray-200 rounded-full transition-all duration-300 ease-in-out
             ${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'}`}
         />
       </div>

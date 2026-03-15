@@ -1,19 +1,12 @@
 'use client';
 
+import { Bell, CircleUserRound, Moon, Sun } from 'lucide-react'
 import React, { useState } from 'react';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { Button } from '@/components/ui/primitives/Button';
 import { BurgerButton } from '@/components/layout/BurgerButton';
 import { SocialLinks } from '@/components/layout/SocialLinks';
-
-const MOBILE_NAV_ITEMS = [
-  { label: 'Home', href: '/' },
-  { label: 'Bisnis', href: '#' },
-  { label: 'Politik', href: '#' },
-  { label: 'Teknologi', href: '#' },
-  { label: 'Hiburan', href: '#' },
-  { label: 'Trending', href: '#' },
-];
+import SearchBar from '@/components/ui/SearchBar/SearchBar';
 
 export function Header() {
   const { isDark, toggle, isLoaded } = useDarkMode();
@@ -22,42 +15,53 @@ export function Header() {
   if (!isLoaded) return null;
 
   return (
-    <header className="sticky top-0 z-40 bg-card border-b border-border shadow-sm">
+    <header className="z-40 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        {/* Header's body */}
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                M
-              </div>
-              <span className="font-bold text-lg hidden sm:inline">Merdeka</span>
+              <img
+                src={'/icons/logo-merdeka.svg'}
+                width={136}
+                height={40}
+              />
             </a>
           </div>
 
           {/* Search bar - Desktop */}
           <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <input
-              type="search"
-              placeholder="Search articles..."
-              className="w-full px-4 py-2 rounded-lg bg-muted text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-sm"
-            />
+            <SearchBar />
           </div>
 
           {/* Controls */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggle}
               className="hidden sm:inline-flex"
-              title={isDark ? 'Light mode' : 'Dark mode'}
             >
-              {isDark ? '☀️' : '🌙'}
+              {isDark ? <Sun /> : <Moon />}
             </Button>
 
-            <Button variant="outline" size="sm" className="hidden sm:inline-flex">
-              Sign In
+            <Button
+              variant='ghost'
+              className='hidden! md:block!'
+            >
+              <Bell />
+            </Button>
+
+            <Button
+              className='bg-white! text-black! dark:text-white! lg:bg-gray-700! lg:text-white! dark:bg-transparent! lg:dark:bg-primary!'
+            >
+              <CircleUserRound />
+              <span
+                className='hidden! lg:flex!'
+              >
+                Masuk
+              </span>
             </Button>
 
             <BurgerButton
@@ -67,34 +71,14 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile search */}
-        <div className="md:hidden mt-3">
-          <input
-            type="search"
-            placeholder="Search..."
-            className="w-full px-4 py-2 rounded-lg bg-muted text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary text-sm"
-          />
-        </div>
-
         {/* Mobile Navigation */}
         <nav
           id="mobile-menu"
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            mobileMenuOpen ? 'max-h-64' : 'max-h-0'
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-64' : 'max-h-0'
+            }`}
         >
           <ul className="pt-4 pb-2 space-y-1">
-            {MOBILE_NAV_ITEMS.map((item) => (
-              <li key={item.label}>
-                <a
-                  href={item.href}
-                  className="block px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            <SearchBar />
           </ul>
         </nav>
       </div>
